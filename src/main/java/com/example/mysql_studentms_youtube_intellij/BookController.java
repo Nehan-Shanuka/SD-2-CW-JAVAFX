@@ -12,7 +12,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class BookController extends HomeController {
+public class BookController extends TicketController {
 
     @FXML
     private TextField myTextFiled;
@@ -20,10 +20,6 @@ public class BookController extends HomeController {
     private RadioButton radio1, radio2, radio3;
     @FXML
     private Label infoText;
-
-    int[] row1 = new int[12];
-    int[] row2 = new int[16];
-    int[] row3 = new int[20];
 
     @FXML
     public void load(ActionEvent event) {
@@ -77,18 +73,27 @@ public class BookController extends HomeController {
             int seat = Integer.parseInt(myTextFiled.getText());
             row1[seat-1] = 1;
             infoText.setText("You Successfully Reserved " + row + " : SEAT " + seat);
+
+            myTicket = new Ticket(firstName, secondName, email, 1, seat);
+            ticketList.add(myTicket);
         }
         if (radio2.isSelected()) {
             String row = radio2.getText();
             int seat = Integer.parseInt(myTextFiled.getText());
             row2[seat-1] = 1;
             infoText.setText("You Successfully Reserved " + row + " : SEAT " + seat);
+
+            myTicket = new Ticket(firstName, secondName, email, 2, seat);
+            ticketList.add(myTicket);
         }
         if (radio3.isSelected()) {
             String row = radio3.getText();
             int seat = Integer.parseInt(myTextFiled.getText());
             row3[seat-1] = 1;
             infoText.setText("You Successfully Reserved " + row + " : SEAT " + seat);
+
+            myTicket = new Ticket(firstName, secondName, email, 2, seat);
+            ticketList.add(myTicket);
         }
     }
 

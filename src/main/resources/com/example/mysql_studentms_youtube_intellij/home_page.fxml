@@ -6,7 +6,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mysql_studentms_youtube_intellij.HomeController">
    <children>
-      <Pane prefHeight="400.0" prefWidth="600.0">
+      <Pane onDragDetected="#onTicketButtonClick" prefHeight="400.0" prefWidth="600.0">
          <children>
             <Button layoutX="260.0" layoutY="260.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="25.0" prefWidth="82.0" style="-fx-background-radius: 15;" text="CLICK HERE" />
             <Label alignment="CENTER" layoutX="81.0" layoutY="27.0" prefHeight="81.0" prefWidth="439.0" text="WELCOME">
@@ -30,7 +30,7 @@
                   <Font size="30.0" />
                </font>
             </Label>
-            <Button layoutX="143.0" layoutY="320.0" mnemonicParsing="false" onAction="#onBookButtonClick" prefHeight="31.0" prefWidth="97.0" style="-fx-background-radius: 15;" text="BOOK">
+            <Button layoutX="143.0" layoutY="320.0" mnemonicParsing="false" onAction="#onTicketButtonClick" prefHeight="31.0" prefWidth="97.0" style="-fx-background-radius: 15;" text="TICKET">
                <font>
                   <Font size="18.0" />
                </font>

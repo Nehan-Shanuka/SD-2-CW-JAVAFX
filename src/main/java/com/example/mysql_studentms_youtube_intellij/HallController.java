@@ -26,17 +26,6 @@ public class HallController extends BookController {
     @FXML
     public void load(ActionEvent event) {
 
-//        Scanner input = new Scanner(System.in);
-//        System.out.println("**Please make sure the all the reserved seat information SAVED into the system already, before LOAD**");
-//
-//        String opinion;
-//
-//        do {
-//            System.out.print("\nDo you want to proceed forwards? (yes|no) : ");
-//            opinion = input.nextLine();
-//            opinion = opinion.toLowerCase();
-//
-//            if (Objects.equals(opinion, "yes")) {
         try {
             File fileObj = new File("seatinfo.txt");
             Scanner fileReader = new Scanner(fileObj);
@@ -73,13 +62,6 @@ public class HallController extends BookController {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
-//            }
-//
-//            if (!(Objects.equals(opinion, "yes") || Objects.equals(opinion, "no"))) {
-//                System.out.println("\nSorry! Make sure to enter the valid response format shown there. Please Try Again.");
-//            }
-//        } while (!(Objects.equals(opinion, "yes") || Objects.equals(opinion, "no")));
-//        System.out.println();
 
         changeColor();
     }

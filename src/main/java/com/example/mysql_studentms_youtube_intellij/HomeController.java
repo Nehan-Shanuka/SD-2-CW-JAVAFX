@@ -10,8 +10,17 @@ import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class HomeController {
+
+    protected Ticket myTicket;
+
+    ArrayList<Ticket> ticketList = new ArrayList<>();
+
+    String firstName;
+    String secondName;
+    String email;
 
     private Stage stage;
     private Scene scene;
@@ -26,6 +35,16 @@ public class HomeController {
     }
 
     @FXML
+    protected void onHomeButtonClick(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("home_page.fxml"));
+        scene = new Scene(root);
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setTitle("Welcome to New Theatre!");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
     protected void onShowButtonClick(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("hall_allocation.fxml"));
         scene = new Scene(root);
@@ -36,11 +55,11 @@ public class HomeController {
     }
 
     @FXML
-    protected void onHomeButtonClick(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("home_page.fxml"));
+    protected void onTicketButtonClick(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("ticket_page.fxml"));
         scene = new Scene(root);
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        stage.setTitle("Welcome to New Theatre!");
+        stage.setTitle("Ticket Info");
         stage.setScene(scene);
         stage.show();
     }

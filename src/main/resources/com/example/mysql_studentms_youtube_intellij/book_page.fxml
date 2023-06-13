@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.RadioButton?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mysql_studentms_youtube_intellij.BookController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mysql_studentms_youtube_intellij.BookController">
    <children>
       <Pane prefHeight="400.0" prefWidth="600.0">
          <children>
@@ -48,7 +44,7 @@
                   <Font size="18.0" />
                </font>
             </Button>
-            <Label fx:id="infoText" layoutX="135.0" layoutY="110.0" text="First Choose the Row &amp; then Choose Your Seat">
+            <Label fx:id="infoText" alignment="CENTER" layoutX="135.0" layoutY="110.0" text="First Choose the Row &amp; then Choose Your Seat">
                <font>
                   <Font name="System Italic" size="16.0" />
                </font>
