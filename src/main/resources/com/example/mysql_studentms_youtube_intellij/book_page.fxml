@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mysql_studentms_youtube_intellij.BookController">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Label fx:id="welcomeText" alignment="CENTER" layoutX="158.0" layoutY="187.0" prefHeight="17.0" prefWidth="284.0" />
+            <Button layoutX="240.0" layoutY="265.0" mnemonicParsing="false" onAction="#load" prefHeight="40.0" prefWidth="123.0" style="-fx-background-radius: 15;" text="CONFIRM">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button layoutX="394.0" layoutY="328.0" mnemonicParsing="false" onAction="#onShowButtonClick" prefHeight="31.0" prefWidth="97.0" style="-fx-background-radius: 15;" text="SHOW">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <TextField fx:id="myTextFiled" alignment="CENTER" layoutX="240.0" layoutY="204.0" prefHeight="40.0" prefWidth="123.0" style="-fx-background-radius: 110;" />
+            <RadioButton fx:id="radio1" layoutX="139.0" layoutY="155.0" mnemonicParsing="false" text="ROW 1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="radio2" layoutX="261.0" layoutY="155.0" mnemonicParsing="false" text="ROW 2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="radio3" layoutX="382.0" layoutY="155.0" mnemonicParsing="false" text="ROW 3">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </RadioButton>
+            <Label alignment="CENTER" layoutX="65.0" layoutY="57.0" prefHeight="73.0" prefWidth="471.0" text="CHOOSE YOUR SEAT">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Label>
+            <Button layoutX="110.0" layoutY="328.0" mnemonicParsing="false" onAction="#onHomeButtonClick" prefHeight="31.0" prefWidth="97.0" style="-fx-background-radius: 15;" text="HOME">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
