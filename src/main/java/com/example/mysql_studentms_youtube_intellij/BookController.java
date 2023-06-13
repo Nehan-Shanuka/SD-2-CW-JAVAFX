@@ -2,6 +2,7 @@ package com.example.mysql_studentms_youtube_intellij;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 
@@ -17,6 +18,8 @@ public class BookController extends HomeController {
     private TextField myTextFiled;
     @FXML
     private RadioButton radio1, radio2, radio3;
+    @FXML
+    private Label infoText;
 
     int[] row1 = new int[12];
     int[] row2 = new int[16];
@@ -70,17 +73,22 @@ public class BookController extends HomeController {
     protected void getSeatInfo(ActionEvent event) {
 
         if (radio1.isSelected()) {
+            String row = radio1.getText();
             int seat = Integer.parseInt(myTextFiled.getText());
             row1[seat-1] = 1;
-            System.out.println(row1[seat]);
+            infoText.setText("You Successfully Reserved " + row + " : SEAT " + seat);
         }
         if (radio2.isSelected()) {
+            String row = radio2.getText();
             int seat = Integer.parseInt(myTextFiled.getText());
             row2[seat-1] = 1;
+            infoText.setText("You Successfully Reserved " + row + " : SEAT " + seat);
         }
         if (radio3.isSelected()) {
+            String row = radio3.getText();
             int seat = Integer.parseInt(myTextFiled.getText());
             row3[seat-1] = 1;
+            infoText.setText("You Successfully Reserved " + row + " : SEAT " + seat);
         }
     }
 
@@ -92,20 +100,18 @@ public class BookController extends HomeController {
             String newline = System.getProperty("line.separator");
             //https://www.geeksforgeeks.org/java-program-to-print-a-new-line-in-string/
 
-            System.out.println(row1[9]);
-
-            for (int i = 0; i<row1.length; i++) {
-                myWriter.write(String.valueOf(row1[i]));
+            for (int item : row1) {
+                myWriter.write(String.valueOf(item));
             }
             myWriter.write(newline);
 
-            for (int i = 0; i<row2.length; i++) {
-                myWriter.write(String.valueOf(row2[i]));
+            for (int item : row2) {
+                myWriter.write(String.valueOf(item));
             }
             myWriter.write(newline);
 
-            for (int i = 0; i<row3.length; i++) {
-                myWriter.write(String.valueOf(row3[i]));
+            for (int item : row3) {
+                myWriter.write(String.valueOf(item));
             }
             myWriter.close();
 

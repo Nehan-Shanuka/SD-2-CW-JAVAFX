@@ -12,42 +12,47 @@
    <children>
       <Pane prefHeight="400.0" prefWidth="600.0">
          <children>
-            <Label fx:id="welcomeText" alignment="CENTER" layoutX="158.0" layoutY="187.0" prefHeight="17.0" prefWidth="284.0" />
-            <Button layoutX="240.0" layoutY="265.0" mnemonicParsing="false" onAction="#load" prefHeight="40.0" prefWidth="123.0" style="-fx-background-radius: 15;" text="CONFIRM">
+            <Label fx:id="welcomeText" alignment="CENTER" layoutX="158.0" layoutY="174.0" prefHeight="17.0" prefWidth="284.0" />
+            <Button layoutX="240.0" layoutY="260.0" mnemonicParsing="false" onAction="#load" prefHeight="35.0" prefWidth="123.0" style="-fx-background-radius: 20;" text="CONFIRM">
                <font>
                   <Font size="18.0" />
                </font></Button>
-            <Button layoutX="394.0" layoutY="328.0" mnemonicParsing="false" onAction="#onShowButtonClick" prefHeight="31.0" prefWidth="97.0" style="-fx-background-radius: 15;" text="SHOW">
+            <Button layoutX="363.0" layoutY="320.0" mnemonicParsing="false" onAction="#onShowButtonClick" prefHeight="31.0" prefWidth="97.0" style="-fx-background-radius: 15;" text="SHOW">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <TextField fx:id="myTextFiled" alignment="CENTER" layoutX="240.0" layoutY="204.0" prefHeight="40.0" prefWidth="123.0" style="-fx-background-radius: 110;" />
-            <RadioButton fx:id="radio1" layoutX="139.0" layoutY="155.0" mnemonicParsing="false" text="ROW 1">
+            <TextField fx:id="myTextFiled" alignment="CENTER" layoutX="261.0" layoutY="199.0" prefHeight="35.0" prefWidth="80.0" style="-fx-background-radius: 110;" />
+            <RadioButton fx:id="radio1" layoutX="139.0" layoutY="161.0" mnemonicParsing="false" text="ROW 1">
                <font>
                   <Font size="16.0" />
                </font>
             </RadioButton>
-            <RadioButton fx:id="radio2" layoutX="261.0" layoutY="155.0" mnemonicParsing="false" text="ROW 2">
+            <RadioButton fx:id="radio2" layoutX="261.0" layoutY="161.0" mnemonicParsing="false" text="ROW 2">
                <font>
                   <Font size="16.0" />
                </font>
             </RadioButton>
-            <RadioButton fx:id="radio3" layoutX="382.0" layoutY="155.0" mnemonicParsing="false" text="ROW 3">
+            <RadioButton fx:id="radio3" layoutX="382.0" layoutY="161.0" mnemonicParsing="false" text="ROW 3">
                <font>
                   <Font size="16.0" />
                </font>
             </RadioButton>
-            <Label alignment="CENTER" layoutX="65.0" layoutY="57.0" prefHeight="73.0" prefWidth="471.0" text="CHOOSE YOUR SEAT">
+            <Label alignment="CENTER" layoutX="65.0" layoutY="27.0" prefHeight="73.0" prefWidth="471.0" text="CHOOSE YOUR SEAT">
                <font>
                   <Font size="50.0" />
                </font>
             </Label>
-            <Button layoutX="110.0" layoutY="328.0" mnemonicParsing="false" onAction="#onHomeButtonClick" prefHeight="31.0" prefWidth="97.0" style="-fx-background-radius: 15;" text="HOME">
+            <Button layoutX="143.0" layoutY="320.0" mnemonicParsing="false" onAction="#onHomeButtonClick" prefHeight="31.0" prefWidth="97.0" style="-fx-background-radius: 15;" text="HOME">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
+            <Label fx:id="infoText" layoutX="135.0" layoutY="110.0" text="First Choose the Row &amp; then Choose Your Seat">
+               <font>
+                  <Font name="System Italic" size="16.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
    </children>
