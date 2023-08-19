@@ -9,47 +9,52 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mysql_studentms_youtube_intellij.TicketController">
    <children>
-      <Pane prefHeight="400.0" prefWidth="600.0">
+      <Pane prefHeight="550.0" prefWidth="800.0">
          <children>
-            <Label layoutX="126.0" layoutY="27.0" text="TICKET DETAILS">
+            <Label layoutX="175.0" layoutY="29.0" text="TICKET DETAILS">
                <font>
-                  <Font size="50.0" />
+                  <Font size="65.0" />
                </font>
             </Label>
-            <Label layoutX="111.0" layoutY="113.0" text="FIRST NAME">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label layoutX="111.0" layoutY="163.0" text="SECOND NAME">
+            <Label layoutX="181.0" layoutY="155.0" text="FIRST NAME">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label layoutX="111.0" layoutY="213.0" text="EMAIL">
+            <Label layoutX="181.0" layoutY="215.0" text="SECOND NAME">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="firstNameText" layoutX="280.0" layoutY="116.0" prefHeight="25.0" prefWidth="210.0" />
-            <TextField fx:id="secondNameText" layoutX="280.0" layoutY="166.0" prefHeight="25.0" prefWidth="210.0" />
-            <TextField fx:id="emailText" layoutX="280.0" layoutY="216.0" prefHeight="25.0" prefWidth="210.0" />
-            <Button alignment="CENTER" layoutX="240.0" layoutY="260.0" mnemonicParsing="false" onAction="#getTicketInfo" prefHeight="35.0" prefWidth="123.0" style="-fx-background-radius: 20;" text="CONFIRM">
+            <Label layoutX="181.0" layoutY="275.0" text="EMAIL">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="firstNameText" layoutX="350.0" layoutY="158.0" prefHeight="25.0" prefWidth="270.0" />
+            <TextField fx:id="secondNameText" layoutX="350.0" layoutY="218.0" prefHeight="25.0" prefWidth="270.0" />
+            <TextField fx:id="emailText" layoutX="350.0" layoutY="278.0" prefHeight="25.0" prefWidth="270.0" />
+            <Button alignment="CENTER" layoutX="340.0" layoutY="362.0" mnemonicParsing="false" onAction="#getTicketInfo" prefHeight="35.0" prefWidth="120.0" style="-fx-background-radius: 20;" text="CONFIRM">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
+            <Button layoutX="460.0" layoutY="440.0" mnemonicParsing="false" onAction="#onShowButtonClick" prefHeight="40.0" prefWidth="160.0" style="-fx-background-radius: 15;" text="SEATING AREA">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="180.0" layoutY="440.0" mnemonicParsing="false" onAction="#onHomeButtonClick" prefHeight="40.0" prefWidth="160.0" style="-fx-background-radius: 15;" text="HOME">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="226.0" layoutY="320.0" prefHeight="27.0" prefWidth="348.0" text="Check the detailes and press confirm" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
-      <Button layoutX="363.0" layoutY="320.0" mnemonicParsing="false" onAction="#onShowButtonClick" prefHeight="31.0" prefWidth="97.0" style="-fx-background-radius: 15;" text="SHOW">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Button>
-      <Button layoutX="143.0" layoutY="320.0" mnemonicParsing="false" onAction="#onHomeButtonClick" prefHeight="31.0" prefWidth="97.0" style="-fx-background-radius: 15;" text="HOME">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Button>
    </children>
 </AnchorPane>

@@ -8,19 +8,20 @@ import java.io.IOException;
 
 public class TicketController extends HomeController {
 
-    int[] row1 = new int[12];
-    int[] row2 = new int[16];
-    int[] row3 = new int[20];
-
     @FXML
     protected TextField firstNameText, secondNameText, emailText;
 
+    Data data = Data.getInstance();
+
+    //Submit the ticket details into the book scene
     @FXML
     protected void getTicketInfo(ActionEvent event) throws IOException {
-        firstName = firstNameText.getText();
-        secondName = secondNameText.getText();
-        email = emailText.getText();
 
+        data.setFirstName(firstNameText.getText());
+        data.setSecondName(secondNameText.getText());
+        data.setEmail(emailText.getText());
+
+        //Open book scene
         onBookButtonClick(event);
     }
 

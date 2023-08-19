@@ -1,6 +1,5 @@
 package com.example.mysql_studentms_youtube_intellij;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -24,45 +23,8 @@ public class HallController extends BookController {
             circle3_16, circle3_17, circle3_18, circle3_19, circle3_20;
 
     @FXML
-    public void load(ActionEvent event) {
-
-        try {
-            File fileObj = new File("seatinfo.txt");
-            Scanner fileReader = new Scanner(fileObj);
-
-            //when reading the "seatinfo.txt" line by line it takes what line is it
-            int while_count = 1;
-
-            while (fileReader.hasNextLine()) {
-                if (while_count == 1) {
-                    String saved_line1 = fileReader.nextLine();
-                    //reassigning row_1 values according to previously saved
-                    for (int i = 0; i < saved_line1.length(); i++) {
-                        row1[i] = Integer.parseInt(String.valueOf(saved_line1.charAt(i)));
-                    }
-                } else if (while_count == 2) {
-                    String saved_line2 = fileReader.nextLine();
-                    for (int i = 0; i < saved_line2.length(); i++) {
-                        row2[i] = Integer.parseInt(String.valueOf(saved_line2.charAt(i)));
-                    }
-                } else if (while_count == 3) {
-                    String saved_line3 = fileReader.nextLine();
-                    for (int i = 0; i < saved_line3.length(); i++) {
-                        row3[i] = Integer.parseInt(String.valueOf(saved_line3.charAt(i)));
-                    }
-                }
-                while_count++;
-            }
-            fileReader.close();
-
-            System.out.println();
-            System.out.format("%55s", "***** Successfully Loaded into the System! *****\n");
-
-        } catch (FileNotFoundException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
-        }
-
+    public void showAvailabilities() {
+        getTextFile();
         changeColor();
     }
 

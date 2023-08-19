@@ -1,6 +1,5 @@
 package com.example.mysql_studentms_youtube_intellij;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
@@ -14,6 +13,11 @@ import java.util.Scanner;
 
 public class BookController extends TicketController {
 
+
+    int[] row1 = new int[12];
+    int[] row2 = new int[16];
+    int[] row3 = new int[20];
+
     @FXML
     private TextField myTextFiled;
     @FXML
@@ -21,8 +25,20 @@ public class BookController extends TicketController {
     @FXML
     private Label infoText;
 
+    Data data = Data.getInstance();
+
+    DataListManager dataArray = DataListManager.getInstance();
+
     @FXML
-    public void load(ActionEvent event) {
+    public void bookTicket() {
+        getTextFile();
+        getSeatInfo();
+        save();
+    }
+
+    //Load the text file that contains reserved seat info
+    protected void getTextFile(){
+
         try {
             File fileObj = new File("seatinfo.txt");
             Scanner fileReader = new Scanner(fileObj);
@@ -59,14 +75,16 @@ public class BookController extends TicketController {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
-
-        getSeatInfo(event);
-
-        save();
     }
 
+    //Getting the row and seat number to complete the ticket
     @FXML
-    protected void getSeatInfo(ActionEvent event) {
+    protected void getSeatInfo() {
+
+        firstName = data.getFirstName();
+        secondName = data.getSecondName();
+        email = data.getEmail();
+
 
         if (radio1.isSelected()) {
             String row = radio1.getText();
@@ -75,28 +93,29 @@ public class BookController extends TicketController {
             infoText.setText("You Successfully Reserved " + row + " : SEAT " + seat);
 
             myTicket = new Ticket(firstName, secondName, email, 1, seat);
-            ticketList.add(myTicket);
         }
-        if (radio2.isSelected()) {
+        else if (radio2.isSelected()) {
             String row = radio2.getText();
             int seat = Integer.parseInt(myTextFiled.getText());
             row2[seat-1] = 1;
             infoText.setText("You Successfully Reserved " + row + " : SEAT " + seat);
 
             myTicket = new Ticket(firstName, secondName, email, 2, seat);
-            ticketList.add(myTicket);
         }
-        if (radio3.isSelected()) {
+        else if (radio3.isSelected()) {
             String row = radio3.getText();
             int seat = Integer.parseInt(myTextFiled.getText());
             row3[seat-1] = 1;
             infoText.setText("You Successfully Reserved " + row + " : SEAT " + seat);
 
-            myTicket = new Ticket(firstName, secondName, email, 2, seat);
-            ticketList.add(myTicket);
+            myTicket = new Ticket(firstName, secondName, email, 3, seat);
         }
+
+        dataArray.addData(myTicket);
+
     }
 
+    //Save the reserved seat data to text file again
     protected void save() {
 
         try {
