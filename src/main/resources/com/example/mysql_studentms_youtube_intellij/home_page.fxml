@@ -10,13 +10,11 @@
    <children>
       <Pane onDragDetected="#onTicketButtonClick" onTouchMoved="#onHomeButtonClick" prefHeight="550.0" prefWidth="800.0">
          <children>
-<!--            <Button layoutX="359.0" layoutY="333.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="25.0" prefWidth="82.0" style="-fx-background-radius: 15;" text="CLICK HERE" />-->
             <Label alignment="CENTER" layoutX="181.0" layoutY="35.0" prefHeight="81.0" prefWidth="439.0" text="WELCOME">
                <font>
                   <Font size="65.0" />
                </font>
             </Label>
-<!--            <Label fx:id="welcomeText" alignment="CENTER" layoutX="270.0" layoutY="277.0" prefHeight="17.0" prefWidth="284.0" />-->
             <Button alignment="CENTER" focusTraversable="false" layoutX="300.0" layoutY="400.0" mnemonicParsing="false" onAction="#onShowButtonClick" prefHeight="40.0" prefWidth="200.0" style="-fx-background-radius: 15;" text="SEATING AREA">
                <font>
                   <Font size="18.0" />
@@ -52,10 +50,11 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Button fx:id="check_button" alignment="CENTER" layoutX="345.0" layoutY="462.0" mnemonicParsing="false" onAction="#onCheckButtonClick" prefHeight="35.0" prefWidth="110.0" style="-fx-background-radius: 15;" text="DETAILS PAGE">
+            <Button alignment="CENTER" focusTraversable="false" layoutX="300.0" layoutY="460.0" mnemonicParsing="false" onAction="#onAdminButtonClick" prefHeight="40.0" prefWidth="200.0" style="-fx-background-radius: 15;" text="ADMIN LOGIN">
                <font>
-                  <Font size="14.0" />
-               </font></Button>
+                  <Font size="18.0" />
+               </font>
+            </Button>
          </children>
       </Pane>
    </children>

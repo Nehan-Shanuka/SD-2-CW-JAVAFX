@@ -6,13 +6,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 
 public class HomeController {
 
@@ -122,11 +119,22 @@ public class HomeController {
 
     //Ticket detail page scene
     @FXML
-    protected void onCheckButtonClick(ActionEvent event) throws IOException {
+    protected void onDetailButtonClick(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("detail_page.fxml"));
         scene = new Scene(root);
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setTitle("Details");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    //Admin LogIn page scene
+    @FXML
+    protected void onAdminButtonClick(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("admin_page.fxml"));
+        scene = new Scene(root);
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle("Admin LogIn");
         stage.setScene(scene);
         stage.show();
     }

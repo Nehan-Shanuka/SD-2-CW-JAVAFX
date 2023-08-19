@@ -8,7 +8,7 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class DetailController extends Data implements Initializable {
+public class DetailController extends HomeController implements Initializable {
 
     private String new_word = "";
     private List<Ticket> newList;
