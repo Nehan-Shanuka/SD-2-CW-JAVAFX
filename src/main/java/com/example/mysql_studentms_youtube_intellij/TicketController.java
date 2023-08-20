@@ -17,12 +17,21 @@ public class TicketController extends HomeController {
     @FXML
     protected void getTicketInfo(ActionEvent event) throws IOException {
 
-        data.setFirstName(firstNameText.getText());
-        data.setSecondName(secondNameText.getText());
-        data.setEmail(emailText.getText());
+        if (firstNameText.getText().isEmpty() || secondNameText.getText().isEmpty()
+                || emailText.getText().isEmpty()){
 
-        //Open book scene
-        onBookButtonClick(event);
+            onTicketButtonClick(event);
+        }
+        else {
+
+            data.setFirstName(firstNameText.getText());
+            data.setSecondName(secondNameText.getText());
+            data.setEmail(emailText.getText());
+
+            //Open book scene
+            onBookButtonClick(event);
+        }
+
     }
 
 
