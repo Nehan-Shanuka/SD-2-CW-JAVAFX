@@ -92,7 +92,7 @@ public class BookController extends TicketController {
             row1[seat-1] = 1;
             infoText.setText("You Successfully Reserved " + row + " : SEAT " + seat);
 
-            myTicket = new Ticket(firstName, secondName, email, 1, seat);
+            myTicket = new Ticket(firstName.toUpperCase(), secondName.toUpperCase(), email.toLowerCase(), 1, seat);
         }
         else if (radio2.isSelected()) {
             String row = radio2.getText();
@@ -100,7 +100,7 @@ public class BookController extends TicketController {
             row2[seat-1] = 1;
             infoText.setText("You Successfully Reserved " + row + " : SEAT " + seat);
 
-            myTicket = new Ticket(firstName, secondName, email, 2, seat);
+            myTicket = new Ticket(firstName.toUpperCase(), secondName.toUpperCase(), email.toLowerCase(), 2, seat);
         }
         else if (radio3.isSelected()) {
             String row = radio3.getText();
@@ -108,7 +108,7 @@ public class BookController extends TicketController {
             row3[seat-1] = 1;
             infoText.setText("You Successfully Reserved " + row + " : SEAT " + seat);
 
-            myTicket = new Ticket(firstName, secondName, email, 3, seat);
+            myTicket = new Ticket(firstName.toUpperCase(), secondName.toUpperCase(), email.toLowerCase(), 3, seat);
         }
 
         dataArray.addData(myTicket);
