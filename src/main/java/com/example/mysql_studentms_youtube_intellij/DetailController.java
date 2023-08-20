@@ -22,6 +22,7 @@ public class DetailController extends HomeController implements Initializable {
     @FXML
     public String show(){
 
+        int ticket_num;
         newList = dataArray.getDataList();
 
         for (int i = 0; i < newList.size(); i++) {
@@ -30,7 +31,9 @@ public class DetailController extends HomeController implements Initializable {
             String row = String.valueOf(newList.get(i).getRow());
             String seat = String.valueOf(newList.get(i).getSeat());
 
-            new_word = new_word + i+1 + "\n\t" + name + "\n\t" + email + "\n\t" + "row : " + row + "  /  " + "seat : " + seat + "\n\n";
+            ticket_num = ++i;
+
+            new_word = new_word + "Ticket No  :  " + ticket_num + "\n\t" + name + "\n\t" + email + "\n\t" + "row : " + row + "  /  " + "seat : " + seat + "\n\n";
 
         }
         return new_word;
