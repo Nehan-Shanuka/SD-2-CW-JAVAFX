@@ -28,7 +28,7 @@ public class AdminController extends HomeController {
         password = passwordField.getText();
 
         if (Objects.equals(username, "admin") && Objects.equals(password, "111111")) {
-            onDetailButtonClick(event);
+            onAdminInterfaceClick(event);
         }
         else {
             massageLabel.setText("Username & Password does not match!\nPlease enter valid credentials.");

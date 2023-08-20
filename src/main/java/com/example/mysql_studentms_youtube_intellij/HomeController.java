@@ -138,4 +138,14 @@ public class HomeController {
         stage.setScene(scene);
         stage.show();
     }
+
+    @FXML
+    protected void onAdminInterfaceClick(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("admin_interface.fxml"));
+        scene = new Scene(root);
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle("Admin LogIn");
+        stage.setScene(scene);
+        stage.show();
+    }
 }

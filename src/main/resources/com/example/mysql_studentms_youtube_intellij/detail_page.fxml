@@ -27,12 +27,17 @@
                   <Font size="14.0" />
                </font>
             </Button>
+            <Button layoutX="450.0" layoutY="450.0" mnemonicParsing="false" onAction="#onAdminInterfaceClick" prefHeight="40.0" prefWidth="180.0" style="-fx-background-radius: 15;" text="ADMIN INTERFACE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="170.0" layoutY="450.0" mnemonicParsing="false" onAction="#onHomeButtonClick" prefHeight="40.0" prefWidth="180.0" style="-fx-background-radius: 15;" text="HOME">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
          </children>
       </Pane>
-      <Button layoutX="320.0" layoutY="450.0" mnemonicParsing="false" onAction="#onHomeButtonClick" prefHeight="40.0" prefWidth="160.0" style="-fx-background-radius: 15;" text="HOME">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Button>
    </children>
 </AnchorPane>
