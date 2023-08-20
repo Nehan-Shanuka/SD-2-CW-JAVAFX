@@ -31,7 +31,7 @@ public class DetailController extends HomeController implements Initializable {
             String row = String.valueOf(newList.get(i).getRow());
             String seat = String.valueOf(newList.get(i).getSeat());
 
-            ticket_num = ++i;
+            ticket_num = i+1;
 
             new_word = new_word + "Ticket No  :  " + ticket_num + "\n\t" + name + "\n\t" + email + "\n\t" + "row : " + row + "  /  " + "seat : " + seat + "\n\n";
 
