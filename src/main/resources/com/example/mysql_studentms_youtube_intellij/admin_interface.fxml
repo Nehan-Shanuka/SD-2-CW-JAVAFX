@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mysql_studentms_youtube_intellij.AdminInterface">
+   <children>
+      <Label alignment="CENTER" layoutX="150.0" layoutY="29.0" prefHeight="94.0" prefWidth="500.0" text="ADMIN POTRAL">
+         <font>
+            <Font size="65.0" />
+         </font>
+      </Label>
+      <Button alignment="CENTER" layoutX="170.0" layoutY="195.0" mnemonicParsing="false" prefHeight="190.0" prefWidth="200.0" style="-fx-background-radius: 30;" text=" CANCEL TICKET" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Button>
+      <Button alignment="CENTER" layoutX="430.0" layoutY="195.0" mnemonicParsing="false" onAction="#onDetailButtonClick" prefHeight="190.0" prefWidth="200.0" style="-fx-background-radius: 30;" text="TICKET DETAILS" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Button>
+      <Button layoutX="320.0" layoutY="450.0" mnemonicParsing="false" onAction="#onHomeButtonClick" prefHeight="40.0" prefWidth="160.0" style="-fx-background-radius: 15;" text="HOME">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
