@@ -48,7 +48,7 @@
                   <Font size="18.0" />
                </font>
             </Button>
-            <Label fx:id="infoText" alignment="CENTER" layoutX="214.0" layoutY="156.0" text="First Choose the Row &amp; then Choose Your Seat">
+            <Label fx:id="infoText" alignment="CENTER" contentDisplay="CENTER" layoutX="25.0" layoutY="156.0" prefHeight="27.0" prefWidth="750.0" text="First Choose the Row &amp; then Choose Your Seat" textAlignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>
