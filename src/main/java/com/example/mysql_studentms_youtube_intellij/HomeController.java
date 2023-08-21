@@ -148,4 +148,14 @@ public class HomeController {
         stage.setScene(scene);
         stage.show();
     }
+
+    @FXML
+    protected void onCancelTicketClick(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("cancelTicket_page.fxml"));
+        scene = new Scene(root);
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle("Cancel Ticket");
+        stage.setScene(scene);
+        stage.show();
+    }
 }
