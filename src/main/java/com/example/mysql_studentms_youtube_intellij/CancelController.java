@@ -3,6 +3,7 @@ package com.example.mysql_studentms_youtube_intellij;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
 
 import java.util.ConcurrentModificationException;
 import java.util.List;
@@ -28,12 +29,22 @@ public class CancelController extends BookController {
         int row = Integer.parseInt(rowInput.getText());
         int seat = Integer.parseInt(seatInput.getText());
 
-        try {
-            newList.removeIf(newTicket -> Objects.equals(row, newTicket.getRow()) && Objects.equals(seat, newTicket.getSeat()));
-            dataList.replaceDataList(newList);
-        } catch (ConcurrentModificationException ignored){}
+        if ((row == 1 && row1[seat-1] == 1) || (row == 2 && row2[seat-1] == 1) || (row == 3 && row3[seat-1] == 1)){
+            try {
+                newList.removeIf(newTicket -> Objects.equals(row, newTicket.getRow()) && Objects.equals(seat, newTicket.getSeat()));
+                dataList.replaceDataList(newList);
 
-        cancelSeatFromSeatingArea(row, seat);
+
+                noticeLabel.setTextFill(Color.rgb(10, 168, 52));
+                noticeLabel.setText("ROW : " + row + " / SEAT : " + seat + " CANCELED SUCCESSFULLY!");
+
+            } catch (ConcurrentModificationException ignored){}
+
+            cancelSeatFromSeatingArea(row, seat);
+        } else {
+            noticeLabel.setTextFill(Color.RED);
+            noticeLabel.setText("SORRY! YOUR REQUEST CAN NOT BE PROCEED.\n" + "ROW : " + row + " / SEAT : " + seat + " IS STILL AVAIALBLE TO PURCHASE!");
+        }
 
     }
 
@@ -45,17 +56,32 @@ public class CancelController extends BookController {
         newList = dataList.getDataList();
         String email = emailText.getText();
 
-        try {
-            for (Ticket newTicket : newList) {
-                if (Objects.equals(email, newTicket.Person.getEmail())) {
-                    newList.remove(newTicket);
+        int massageSignal = 0;
 
-                    cancelSeatFromSeatingArea(newTicket.getRow(), newTicket.getSeat());
+        try {
+            for (int i = newList.size()-1 ; i >= 0; i--) {
+                if (Objects.equals(email, newList.get(i).Person.getEmail())) {
+
+                    cancelSeatFromSeatingArea(newList.get(i).getRow(), newList.get(i).getSeat());
+                    newList.remove(i);
+
+                    massageSignal = 1;
                 }
             }
             dataList.replaceDataList(newList);
         }
         catch (ConcurrentModificationException ignored){}
+
+        if (massageSignal == 1){
+
+            noticeLabel.setTextFill(Color.rgb(10, 168, 52));
+            noticeLabel.setText("ALL THE SEATS PURCHASED BY \"" + email + "\" CANCELED SUCCESSFULLY!");
+        }
+        else {
+
+            noticeLabel.setTextFill(Color.RED);
+            noticeLabel.setText("SORRY! THERE IS NO PURCHASED SEATS UNDER \"" + email + "\" .");
+        }
     }
 
     @FXML
@@ -71,6 +97,9 @@ public class CancelController extends BookController {
 
         newList.clear();
         dataList.replaceDataList(newList);
+
+        noticeLabel.setTextFill(Color.rgb(10, 168, 52));
+        noticeLabel.setText("ALL THE RESERVED TICKETS ARE CANCELED!\nEVERY SEATS READY TO PURCHASE FOR THE SCREEN!");
     }
 
     protected void cancelSeatFromSeatingArea(int row_num, int seat_num){
