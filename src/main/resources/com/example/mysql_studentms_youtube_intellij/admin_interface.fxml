@@ -12,12 +12,12 @@
             <Font size="65.0" />
          </font>
       </Label>
-      <Button alignment="CENTER" layoutX="170.0" layoutY="195.0" mnemonicParsing="false" prefHeight="190.0" prefWidth="200.0" style="-fx-background-radius: 30;" text=" CANCEL TICKET" textAlignment="CENTER" wrapText="true">
+      <Button alignment="CENTER" layoutX="170.0" layoutY="180.0" mnemonicParsing="false" onAction="#onCancelTicketClick" prefHeight="190.0" prefWidth="200.0" style="-fx-background-radius: 30;" text=" CANCEL TICKET" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="30.0" />
          </font>
       </Button>
-      <Button alignment="CENTER" layoutX="430.0" layoutY="195.0" mnemonicParsing="false" onAction="#onDetailButtonClick" prefHeight="190.0" prefWidth="200.0" style="-fx-background-radius: 30;" text="TICKET DETAILS" textAlignment="CENTER" wrapText="true">
+      <Button alignment="CENTER" layoutX="430.0" layoutY="180.0" mnemonicParsing="false" onAction="#onDetailButtonClick" prefHeight="190.0" prefWidth="200.0" style="-fx-background-radius: 30;" text="TICKET DETAILS" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="30.0" />
          </font>
