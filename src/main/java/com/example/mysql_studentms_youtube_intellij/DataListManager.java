@@ -19,6 +19,10 @@ public class DataListManager {
         this.dataList.add(data);
     }
 
+    public void replaceDataList(List<Ticket> dataList){
+        this.dataList = dataList;
+    }
+
     public List<Ticket> getDataList() {
         return dataList;
     }
