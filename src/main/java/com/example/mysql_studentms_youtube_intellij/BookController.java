@@ -90,30 +90,14 @@ public class BookController extends TicketController {
         if (radio1.isSelected()) {
 
             insertData(firstName, secondName, email, 1, seat, radio1, 1, 12, row1);
-//            String row = radio1.getText();
-//            int seat = Integer.parseInt(myTextFiled.getText());
-//            row1[seat-1] = 1;
-//            infoText.setText("You Successfully Reserved " + row + " : SEAT " + seat);
-//
-//            myTicket = new Ticket(firstName.toUpperCase(), secondName.toUpperCase(), email.toLowerCase(), 1, seat);
         }
         else if (radio2.isSelected()) {
 
             insertData(firstName, secondName, email, 2, seat, radio2, 1, 16, row2);
-//            String row = radio2.getText();
-//            row2[seat-1] = 1;
-//            infoText.setText("You Successfully Reserved " + row + " : SEAT " + seat);
-//
-//            myTicket = new Ticket(firstName.toUpperCase(), secondName.toUpperCase(), email.toLowerCase(), 2, seat);
         }
         else if (radio3.isSelected()) {
 
             insertData(firstName, secondName, email, 3, seat, radio3, 1, 20, row3);
-//            String row = radio3.getText();
-//            row3[seat-1] = 1;
-//            infoText.setText("You Successfully Reserved " + row + " : SEAT " + seat);
-//
-//            myTicket = new Ticket(firstName.toUpperCase(), secondName.toUpperCase(), email.toLowerCase(), 3, seat);
         }
 
     }
