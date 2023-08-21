@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mysql_studentms_youtube_intellij.CancelController">
    <children>
-      <Button layoutX="310.0" layoutY="440.0" mnemonicParsing="false" onAction="#onAdminInterfaceClick" prefHeight="40.0" prefWidth="180.0" style="-fx-background-radius: 15;" text="ADMIN INTERFACE">
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="310.0" layoutY="440.0" mnemonicParsing="false" onAction="#onAdminInterfaceClick" prefHeight="40.0" prefWidth="180.0" style="-fx-background-radius: 15;" text="ADMIN INTERFACE">
          <font>
             <Font size="18.0" />
          </font>
@@ -23,7 +23,7 @@
          </font>
       </Label>
       <TextField fx:id="emailText" layoutX="350.0" layoutY="238.0" prefHeight="26.0" prefWidth="210.0" promptText="ENTER EMAIL" />
-      <Button alignment="CENTER" layoutX="540.0" layoutY="440.0" mnemonicParsing="false" onAction="#onDetailButtonClick" prefHeight="40.0" prefWidth="180.0" style="-fx-background-radius: 15;" text="TICKET DETAILS" textAlignment="CENTER" wrapText="true">
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="540.0" layoutY="440.0" mnemonicParsing="false" onAction="#onDetailButtonClick" prefHeight="40.0" prefWidth="180.0" style="-fx-background-radius: 15;" text="TICKET DETAILS" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="18.0" />
          </font>
@@ -44,7 +44,7 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Button layoutX="80.0" layoutY="440.0" mnemonicParsing="false" onAction="#onHomeButtonClick" prefHeight="40.0" prefWidth="180.0" style="-fx-background-radius: 15;" text="HOME">
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="80.0" layoutY="440.0" mnemonicParsing="false" onAction="#onHomeButtonClick" prefHeight="40.0" prefWidth="180.0" style="-fx-background-radius: 15;" text="HOME">
          <font>
             <Font size="18.0" />
          </font>
@@ -69,7 +69,7 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <Label fx:id="noticeLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="75.0" layoutY="381.0" prefHeight="36.0" prefWidth="650.0" textAlignment="CENTER">
+      <Label fx:id="noticeLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="75.0" layoutY="371.0" prefHeight="60.0" prefWidth="650.0" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="16.0" />
          </font>
