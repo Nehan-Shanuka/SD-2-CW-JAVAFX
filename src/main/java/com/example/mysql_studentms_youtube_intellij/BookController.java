@@ -111,7 +111,7 @@ public class BookController extends TicketController {
         if (seat_num >= firstSeatNum && seat_num <= lastSeatNum && rowArray[seat_num-1] == 0){
             rowArray[seat_num-1] = 1;
             infoText.setTextFill(Color.rgb(10, 168, 52));
-            infoText.setText("You Successfully Reserved " + row + " : SEAT " + seat_num);
+            infoText.setText("Successfully Reserved " + row + " : SEAT " + seat_num);
 
             myTicket = new Ticket(firstName.toUpperCase(), secondName.toUpperCase(), email.toLowerCase(), row_num, seat_num);
 
