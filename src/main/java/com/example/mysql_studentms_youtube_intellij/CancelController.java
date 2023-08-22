@@ -56,7 +56,7 @@ public class CancelController extends BookController {
         newList = dataList.getDataList();
         String email = emailText.getText();
 
-        int massageSignal = 0;
+        boolean massageSignal = false;
 
         try {
             for (int i = newList.size()-1 ; i >= 0; i--) {
@@ -65,14 +65,14 @@ public class CancelController extends BookController {
                     cancelSeatFromSeatingArea(newList.get(i).getRow(), newList.get(i).getSeat());
                     newList.remove(i);
 
-                    massageSignal = 1;
+                    massageSignal = true;
                 }
             }
             dataList.replaceDataList(newList);
         }
         catch (ConcurrentModificationException ignored){}
 
-        if (massageSignal == 1){
+        if (massageSignal){
 
             noticeLabel.setTextFill(Color.rgb(10, 168, 52));
             noticeLabel.setText("ALL THE SEATS PURCHASED BY \"" + email + "\" CANCELED SUCCESSFULLY!");
